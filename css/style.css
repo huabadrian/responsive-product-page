@@ -1,5 +1,11 @@
 :root {
-
+  --font-size-sm: clamp(Infinityrem, -Infinityvw + Infinityrem, 0.89rem);
+  --font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
+  --font-size-md: clamp(0rem, 2.88vw + -0.72rem, 1.58rem);
+  --font-size-lg: clamp(0rem, 3.84vw + -0.96rem, 2.11rem);
+  --font-size-xl: clamp(0rem, 5.11vw + -1.28rem, 2.81rem);
+  --font-size-xxl: clamp(0rem, 6.82vw + -1.7rem, 3.75rem);
+  --font-size-xxxl: clamp(0rem, 9.09vw + -2.27rem, 5rem);
 }
 
 * {
@@ -20,8 +26,101 @@ html {
   line-height: 1.4;
 }
 
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#header > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul{
+  display: flex;
+  list-style-type: none;
+}
+
+nav ul li {
+  padding-left: 1.25em;
+}
+
+
+nav ul li a:link,
+nav ul li a:visited {
+  color: #000;
+  text-decoration: none;
+}
+
 body {
   margin: 0;
+}
+
+.product-grid {
+  display : grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 2.5em;
+  gap: 1em;
+}
+
+
+#bite-me {
+  padding-bottom: 5em;
+}
+
+h1 {
+  font-size: var(--font-size-lg);
+  padding-bottom: -10em;
+}
+
+
+#quotes {
+  background-color: #000;
+  color: #fff;
+}
+
+#grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1em;
+}
+
+/* @media (min-width: 38em){
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 60em){
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+} */
+
+#col{
+  padding-left: 8em;
+  padding-right: 8em;
+}
+
+.dough-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 1em;
+}
+
+@media (min-width: 38em){
+  .dough-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 60em){
+  .dough-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 
 img {
